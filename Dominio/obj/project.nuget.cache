@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "UvYKDsj2WVCs9wZ85pmZh2SG3WwGYu3ejUF/nfxD/rUTLt1fbU6E0/ELx3LHFsJnhBaeXpTU9HCWrgHc4JQGNg==",
+  "success": true,
+  "projectFilePath": "C:\\Grupo11\\Aplicacion\\Dominio\\Dominio.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\loret\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\loret\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
