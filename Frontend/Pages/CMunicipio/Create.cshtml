@@ -1,0 +1,31 @@
+﻿@page
+@model Frontend.Pages.CMunicipio.CreateModel
+@{
+    ViewData["Title"]="Create";
+}
+<p></p>
+<h3>Crear Municipio</h3>
+<h2 class="textDanger">@ViewData["Error"]</h2>
+<div class="form-horizontal">
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <div class="form-group">
+                    <label asp-for="Municipio.Nombre" class="control-label">Nombre</label>
+                    <input asp-for="Municipio.Nombre" class="form-control"/>
+                </div>
+                <div>
+                    <input type="submit" value="Crear" class="btn btn-success"/>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div>
+        <p></p>
+        <a asp-page="Index"> >>> Ir al Inicio Municipio <<< </a>
+    </div>
+</div>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

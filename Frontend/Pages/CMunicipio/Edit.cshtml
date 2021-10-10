@@ -1,0 +1,31 @@
+﻿@page
+@model Frontend.Pages.CMunicipio.EditModel
+@{
+    ViewData["Title"]="Edit";
+}
+
+<h1>Editar Municipio</h1>
+<h2 class="text-danger">@ViewData["Error"]</h2>
+<div class="form-horizontal">
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <input type="hidden" asp-for="objMunicipio.Id">
+                <div class="form-group">
+                    <label asp-for="objMunicipio.Nombre" class="control-label"></label>
+                    <input asp-for="objMunicipio.Nombre"class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Modificar" class="btn btn-success"/>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div>
+        <a asp-page="Index">Ir al inicio</a>
+    </div>
+</div>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

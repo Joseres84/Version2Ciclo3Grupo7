@@ -1,0 +1,46 @@
+﻿@page
+@model Frontend.Pages.CPatrocinador.CreateModel
+@{
+    ViewData["Title"]="Create";
+}
+<p></p>
+<h3>Crear Patrocinador</h3>
+<h2 class="textDanger">@ViewData["Error"]</h2>
+<div class="form-horizontal">
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <div class="form-group">
+                    <label asp-for="Patrocinador.Documento" class="control-label">Documento</label>
+                    <input asp-for="Patrocinador.Documento" class="form-control"/>
+                    <label asp-for="Patrocinador.TipoPersona" id= "TipoPersona-select" class="control-label">Tipo Persona</label>
+                    <select asp-for="Patrocinador.TipoPersona" class="form-control">
+                        <option value="" disabled="" selected="">Selecciona Tipo Persona</option>                        
+                        <option value="Natural">Natural</option>
+                        <option value="Jurídica">Jurídica</option>
+                    </select>    
+                    <span asp-validation-for="Patrocinador.TipoPersona" class="text-danger"></span>                                    
+                    <label asp-for="Patrocinador.Nombre" class="control-label">Nombre</label>
+                    <input asp-for="Patrocinador.Nombre" class="form-control"/>
+                    <label asp-for="Patrocinador.Telefono" class="control-label">Teléfono</label>
+                    <input asp-for="Patrocinador.Telefono" class="form-control"/>
+                    <label asp-for="Patrocinador.Direccion" class="control-label">Dirección</label>
+                    <input asp-for="Patrocinador.Direccion" class="form-control"/>
+                    <label asp-for="Patrocinador.Email" class="control-label">Email</label>
+                    <input asp-for="Patrocinador.Email" class="form-control"/>       
+                </div>
+                <div>
+                    <input type="submit" value="Crear" class="btn btn-success"/>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div>
+        <p></p>
+        <a asp-page="Index"> >>> Ir al Inicio Patrocinador <<< </a>
+    </div>
+</div>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

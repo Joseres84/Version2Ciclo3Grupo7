@@ -1,0 +1,30 @@
+﻿@page
+@model Frontend.Pages.CMunicipio.DetailsModel
+@{
+    ViewData["Title"]="Details";
+}
+<h1>Detalles Municipio</h1>
+<div class="form-horizontal">
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <input type="hidden" asp-for="mun.Id">
+                <div class="form-group">
+                    <label asp-for="mun.Id" class="control-label"></label>
+                    <input asp-for="mun.Id" class="form-control" readonly/>
+                </div>                
+                <div class="form-group">
+                    <label asp-for="mun.Nombre" class="control-label"></label>
+                    <input asp-for="mun.Nombre" class="form-control" readonly/>
+                </div>               
+            </form>
+        </div>
+    </div>
+    <div>
+        <a asp-page="Index">Ir al inicio</a>
+    </div>
+</div>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
